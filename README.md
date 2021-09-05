@@ -2,7 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/open_weather_map_api`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+https://openweathermap.org/
 
 ## Installation
 
@@ -21,8 +21,10 @@ Or install it yourself as:
     $ gem install open_weather_map_api
 
 ## Usage
-
-TODO: Write usage instructions here
+Ruby:
+require 'open_weather_map_api'
+client = OpenWeatherMapApi::Client.new(api_key: 'YOUR API KEY',lat: '40',lon: '49')
+puts client.list
 
 ## Development
 
