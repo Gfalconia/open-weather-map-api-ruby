@@ -1,6 +1,15 @@
 # OpenWeatherMapApi
+Currently supported resources:
+One Call API
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/open_weather_map_api`. To experiment with that code, run `bin/console` for an interactive prompt.
+TODO:
+Current Weather Data
+5 Day / 3 Hour Forecast
+Weather Maps 1.0
+Air Pollution API
+Geocoding API
+Weather Stations
+Weather Triggers
 
 https://openweathermap.org/
 
@@ -23,8 +32,10 @@ Or install it yourself as:
 ## Usage
 Ruby:
 require 'open_weather_map_api'
-client = OpenWeatherMapApi::Client.new(api_key: 'YOUR API KEY',lat: '40',lon: '49')
-puts client.list
+client = OpenWeatherMapApi::Client.new(api_key: 'YOUR_API_KEY',lat: '40',lon: '49')
+data = client.connect
+puts data.current.temp #Show current temp
+puts data.current.weather[0].description #Description of weather condition
 
 ## Development
 
@@ -42,4 +53,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the OpenWeatherMapApi project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/open_weather_map_api/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the OpenWeatherMapApi project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/Gfalconia/open_weather_map_api/blob/master/CODE_OF_CONDUCT.md).
