@@ -1,15 +1,23 @@
 # OpenWeatherMapApi
-Currently supported resources:
-One Call API
+    Currently supported resources:
 
-TODO:
-Current Weather Data
-5 Day / 3 Hour Forecast
-Weather Maps 1.0
-Air Pollution API
-Geocoding API
-Weather Stations
-Weather Triggers
+    One Call API
+
+    TODO:
+
+    Current Weather Data
+
+    5 Day / 3 Hour Forecast
+
+    Weather Maps 1.0
+    
+    Air Pollution API
+
+    Geocoding API
+
+    Weather Stations
+
+    Weather Triggers
 
 https://openweathermap.org/
 
@@ -30,13 +38,18 @@ Or install it yourself as:
     $ gem install open_weather_map_api
 
 ## Usage
-Ruby:
-require 'open_weather_map_api'
-client = OpenWeatherMapApi::Client.new(api_key: 'YOUR_API_KEY',lat: '40',lon: '49')
-data = client.connect
-puts data.current.temp #Show current temp
-puts data.current.weather[0].description #Description of weather condition
+    Ruby:
+```ruby
+    require 'open_weather_map_api'
 
+    client = OpenWeatherMapApi::Client.new(api_key: 'YOUR_API_KEY',lat: '40',lon: '49')
+
+    data = client.connect
+
+    puts data.current.temp #Show current temp
+
+    puts data.current.weather[0].description #Description of weather condition
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
